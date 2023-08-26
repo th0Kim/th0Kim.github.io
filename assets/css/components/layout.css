@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* wrapper - normal */
+.wrapper {
+  background-color: #f9fafc;
+}
+
+/* content common - normal */
+.contents-container {
+  max-width: 144rem;
+  margin: 0 auto;
+}

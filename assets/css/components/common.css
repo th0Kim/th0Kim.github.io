@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* input */
+input {
+  padding: 0 1.5rem;
+  border: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: rgba(29, 31, 36, 1);
+}
+input::placeholder {
+  color: rgba(29, 31, 36, 0.4);
+}
+
+/* button */
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2.7rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.btn-primary {
+  background-color: #ff565c;
+  color: #ffffff;
+}

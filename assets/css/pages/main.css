@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/* main */
+/* card normal */
+.card-container {
+  position: relative;
+}
+.card-container .item-area-front {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem;
+  color: #ffffff;
+}
+.card-container .item-area-back {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 27.4rem;
+}
+.card-container .item-area-back img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-container .item-foot {
+  margin-top: auto;
+}
+.card-container .item-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  margin-bottom: 1.2rem;
+  padding: 0 2.3rem;
+  margin-left: -2.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ff565c;
+}
+.card-container .item-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.2px;
+  color: inherit;
+}
+.card-container .item-text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: inherit;
+}
+.card-container .btn {
+  min-width: 21rem;
+  height: 6rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 2px solid #ffffff;
+}
+/* card none back image */
+.card-container.none-back .item-area-front {
+  position: static;
+  color: #ffffff;
+  background-color: #ff565c;
+}
+.card-container.none-back .item-foot {
+  margin-top: 3rem;
+}
+.card-container.none-back .item-title {
+  margin-bottom: 2rem;
+  font-size: 3.2rem;
+}
+
+/* main > visual */
+/* visual > card */
+.main-area-top .card-container .item-area-back {
+  height: 58.1rem;
+}
+.main-area-top .card-container .item-area-front {
+  justify-content: center;
+  align-items: center;
+}
+.main-area-top .card-container .item-label {
+  margin-bottom: 3rem;
+  margin-left: initial;
+}
+.main-area-top .card-container .item-title {
+  margin-bottom: 0.5rem;
+  font-size: 3.2rem;
+}
+.main-area-top .card-container .item-text {
+  color: rgba(255, 255, 255, 0.7);
+}
