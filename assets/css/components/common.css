@@ -28,3 +28,9 @@ input::placeholder {
   background-color: #ff565c;
   color: #ffffff;
 }
+
+/* responsive */
+@media screen and (max-width: 1280px) {
+  /* input */
+  /* button */
+}

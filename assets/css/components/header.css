@@ -57,3 +57,11 @@
     color: rgba(29, 31, 36, 1);
   }
 }
+
+/* responsive */
+@media screen and (max-width: 1080px) {
+  /* header - normal */
+  .gnb {
+    display: none;
+  }
+}

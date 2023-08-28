@@ -39,7 +39,7 @@
   justify-content: center;
   align-items: center;
   height: 4rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.2rem;
   padding: 0 2.3rem;
   margin-left: -2.5rem;
   font-family: 'Oswald', sans-serif;
@@ -53,7 +53,7 @@
 }
 .card-container .item-title {
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.25;
   letter-spacing: -0.2px;
   color: inherit;
@@ -147,14 +147,17 @@
 .area-middle-left .stories-container {
   margin: 1.6rem;
 }
-.flex-row {
+.card-area-flex .flex-row {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
 }
-.flex-row .card-container {
+.card-area-flex .card-container {
   margin: 1.6rem;
+}
+.card-area-flex .card-container .item-title {
+  max-width: 48.4rem;
 }
 
 /* main > Featured stories */
@@ -276,4 +279,47 @@
   .card-swiper [class*='btn-swiper-']:hover {
     border-color: #ff565c;
   }
+}
+
+/* responsive */
+@media screen and (max-width: 1280px) {
+  /* card normal */
+  /* card none back image */
+  /* main */
+  .main-area-top {
+    margin-bottom: 1.6rem;
+  }
+  .main-area-middle {
+    margin: -0.8rem;
+  }
+  .area-middle-left {
+    max-width: 29.4rem;
+  }
+  .area-middle-left .stories-container {
+    margin: 0.8rem;
+  }
+  .area-middle-right {
+    flex: 1;
+  }
+  .content-side {
+    margin-top: 1.5rem;
+  }
+  .card-area-flex .card-container {
+    margin: 0.8rem;
+  }
+  .card-area-flex .flex-row .card-container {
+    width: 100%;
+  }
+  .card-area-flex .flex-row:nth-child(2) .card-container .item-area-back {
+    height: 34.4rem;
+  }
+  .card-area-flex .flex-row:nth-child(2) .card-container:last-child {
+    display: none;
+  }
+  /* main > Featured stories */
+  /* list */
+  /* main visual > card */
+  /* card swiper */
+}
+@media screen and (max-width: 1080px) {
 }
