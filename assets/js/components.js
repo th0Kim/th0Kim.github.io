@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function footerMenuResize() {
     const mxSize = matchMedia('screen and (max-width: 1080px)').matches;
-    const smSize = matchMedia('screen and (max-width: 768px)').matches;
+    const smSize = matchMedia('screen and (max-width: 767px)').matches;
     if (smSize) {
       footerMenu.innerHTML = `
         <li><a href="javascript:void(0);">TECHNOLOGY</a></li>

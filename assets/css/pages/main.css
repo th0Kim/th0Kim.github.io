@@ -321,5 +321,19 @@
   /* main visual > card */
   /* card swiper */
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 767px) {
+  .main-area-middle {
+    display: block;
+    margin: 0;
+  }
+  .area-middle-left {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .area-middle-left .stories-container {
+    margin: 0;
+  }
+  .card-area-flex .card-container {
+    margin: 0.8rem 0;
+  }
 }
