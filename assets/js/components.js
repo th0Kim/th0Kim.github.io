@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Header
   const headerID = document.getElementById('header');
   headerID.innerHTML = `
     <div class="header-inner">
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
   `;
 
+  // Footer
   const footerID = document.getElementById('footer');
   footerID.innerHTML = `
     <div class="footer-inner">
@@ -75,22 +77,18 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
   `;
 
-  const mxSize = matchMedia('screen and (max-width: 1080px)').matches;
-  const smSize = matchMedia('screen and (max-width: 768px)').matches;
-
+  // Responsive Footer Menu list
   const footerMenu = document.getElementById('footer-menu');
+  window.addEventListener('load', footerMenuLoad);
+  function footerMenuLoad() {
+    footerMenuResize();
+    window.addEventListener('resize', footerMenuResize);
+  }
 
-  window.addEventListener('load', function () {
-    footerMenuFunc();
-  });
-  window.addEventListener('resize', function () {
-    footerMenuFunc();
-  });
-
-  function footerMenuFunc() {
+  function footerMenuResize() {
+    const mxSize = matchMedia('screen and (max-width: 1080px)').matches;
+    const smSize = matchMedia('screen and (max-width: 768px)').matches;
     if (smSize) {
-      // console.log('768px');
-      // footerMenu.innerHTML = ``;
       footerMenu.innerHTML = `
         <li><a href="javascript:void(0);">TECHNOLOGY</a></li>
         <li><a href="javascript:void(0);">VIDEO</a></li>
@@ -101,8 +99,6 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="javascript:void(0);">LEADERSHIP</a></li>
       `;
     } else if (mxSize) {
-      // console.log('1080px');
-      // footerMenu.innerHTML = ``;
       footerMenu.innerHTML = `
         <li><a href="javascript:void(0);">TECHNOLOGY</a></li>
         <li><a href="javascript:void(0);">LEADERSHIP</a></li>
@@ -113,8 +109,6 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="javascript:void(0);">ENTERTAINMENT</a></li>
       `;
     } else {
-      // console.log('all');
-      // footerMenu.innerHTML = ``;
       footerMenu.innerHTML = `
         <li><a href="javascript:void(0);">TECHNOLOGY</a></li>
         <li><a href="javascript:void(0);">LEADERSHIP</a></li>
