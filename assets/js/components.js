@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var headerID = document.getElementById('header');
+  const headerID = document.getElementById('header');
   headerID.innerHTML = `
     <div class="header-inner">
       <h1 class="header-logo"><a href="/" title="Deck."></a></h1>
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
   `;
 
-  var footerID = document.getElementById('footer');
+  const footerID = document.getElementById('footer');
   footerID.innerHTML = `
     <div class="footer-inner">
       <div class="footer-area-left">
@@ -31,15 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
       </div>
       <div class="footer-area-center">
-        <ul class="footer-menu">
-          <li><a href="javascript:void(0);">TECHNOLOGY</a></li>
-          <li><a href="javascript:void(0);">IDEAS</a></li>
-          <li><a href="javascript:void(0);">LEADERSHIP</a></li>
-          <li><a href="javascript:void(0);">VIDEO</a></li>
-          <li><a href="javascript:void(0);">NEWS</a></li>
-          <li><a href="javascript:void(0);">Finance</a></li>
-          <li><a href="javascript:void(0);">ENTERTAINMENT</a></li>
-        </ul>
+        <ul class="footer-menu" id="footer-menu"></ul>
       </div>
       <div class="footer-area-right">
         <div class="footer-enter-email">
@@ -82,4 +74,56 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
     </div>
   `;
+
+  const mxSize = matchMedia('screen and (max-width: 1080px)').matches;
+  const smSize = matchMedia('screen and (max-width: 768px)').matches;
+
+  const footerMenu = document.getElementById('footer-menu');
+
+  window.addEventListener('load', function () {
+    footerMenuFunc();
+  });
+  window.addEventListener('resize', function () {
+    footerMenuFunc();
+  });
+
+  function footerMenuFunc() {
+    if (smSize) {
+      // console.log('768px');
+      // footerMenu.innerHTML = ``;
+      footerMenu.innerHTML = `
+        <li><a href="javascript:void(0);">TECHNOLOGY</a></li>
+        <li><a href="javascript:void(0);">VIDEO</a></li>
+        <li><a href="javascript:void(0);">IDEAS</a></li>
+        <li><a href="javascript:void(0);">NEWS</a></li>
+        <li><a href="javascript:void(0);">ENTERTAINMENT</a></li>
+        <li><a href="javascript:void(0);">Finance</a></li>
+        <li><a href="javascript:void(0);">LEADERSHIP</a></li>
+      `;
+    } else if (mxSize) {
+      // console.log('1080px');
+      // footerMenu.innerHTML = ``;
+      footerMenu.innerHTML = `
+        <li><a href="javascript:void(0);">TECHNOLOGY</a></li>
+        <li><a href="javascript:void(0);">LEADERSHIP</a></li>
+        <li><a href="javascript:void(0);">NEWS</a></li>
+        <li><a href="javascript:void(0);">IDEAS</a></li>
+        <li><a href="javascript:void(0);">VIDEO</a></li>
+        <li><a href="javascript:void(0);">Finance</a></li>
+        <li><a href="javascript:void(0);">ENTERTAINMENT</a></li>
+      `;
+    } else {
+      // console.log('all');
+      // footerMenu.innerHTML = ``;
+      footerMenu.innerHTML = `
+        <li><a href="javascript:void(0);">TECHNOLOGY</a></li>
+        <li><a href="javascript:void(0);">LEADERSHIP</a></li>
+        <li><a href="javascript:void(0);">NEWS</a></li>
+        <li><a href="javascript:void(0);">ENTERTAINMENT</a></li>
+        <li><a href="javascript:void(0);">IDEAS</a></li>
+        <li><a href="javascript:void(0);">VIDEO</a></li>
+        <li><a href="javascript:void(0);">Finance</a></li>
+      `;
+    }
+  }
 });
